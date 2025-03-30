@@ -1,8 +1,3 @@
-import service.MyPipeline
-import javaposse.jobdsl.dsl.DslFactory
-
-package service
-
 import javaposse.jobdsl.dsl.DslFactory
 
 class MyPipeline {
