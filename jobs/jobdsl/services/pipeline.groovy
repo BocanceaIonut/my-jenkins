@@ -54,3 +54,7 @@ deliveryPipelineView("My Application Pipeline") {
         component("My Application", new MyPipeline(this as DslFactory).build.getName())
     }
 } 
+
+def factory = this as DslFactory
+def pipeline = new MyPipeline(factory)
+pipeline.build 
