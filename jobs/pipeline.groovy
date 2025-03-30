@@ -1,4 +1,4 @@
-import com.myjenkins.service.MyPipeline
+import service.MyPipeline
 import javaposse.jobdsl.dsl.DslFactory
 
 deliveryPipelineView("My Application Pipeline") {
