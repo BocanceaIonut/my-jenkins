@@ -6,37 +6,27 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        echo 'Building..'
-        sh '''
-          cd my-app
-          pip install -r requirements.txt
-        '''
+        echo 'Building the application...'
+        sh 'sleep 5' // Simulate build time
       }
     }
     stage('Test') {
       steps {
-        echo 'Testing..'
-        sh '''
-          cd my-app
-          python3 hello.py
-          python3 hello.py --name=bdev
-        '''
+        echo 'Running tests...'
+        sh 'sleep 3' // Simulate test time
       }
     }
     stage('Deploy to Staging') {
       steps {
-        echo 'Deploying to Staging..'
-        sh '''
-          echo "Deploying to staging environment..."
-        '''
+        echo 'Deploying to staging environment...'
+        sh 'sleep 4' // Simulate deployment time
       }
     }
     stage('Deploy to Production') {
       steps {
-        echo 'Deploying to Production..'
-        sh '''
-          echo "Deploying to production environment..."
-        '''
+        input message: 'Deploy to production?'
+        echo 'Deploying to production environment...'
+        sh 'sleep 5' // Simulate deployment time
       }
     }
   }
